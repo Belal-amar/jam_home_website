@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Jammaini Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="logo">
+            <div class="logo-container">
+                <img src="{% static 'images/J-H.jpg' %}" alt="Al-Jammaini Home Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>Al-Jammaini Home</h1>
+                    <p>Your Trusted Partner for Home Appliances</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Slogan Section -->
+        <section class="slogan">
+            <div class="slogan-overlay"></div>
+            <img src="{% static 'images/homeapp.avif' %}" alt="slogan">
+            <div class="slogan-text">
+                <h1><span class="highlight">Elevate, Innovate, & Beyond Limits</span></h1>
+                <div class="buttons">
+                    <button id="register-btn" class="button1">Register</button>
+                    <button id="login-btn" class="button2">Login</button>
+                </div>    
+            </div>
+        </section>
+        <div id="login-popup" class="modal">
+            <div class="modal-content">
+                <span class="close close-login">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form" action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="email" name="email" id="email" placeholder="Email" required><br>
+                    <input type="password" name="password" id="password" placeholder="Password" required><br>
+                    <button type="submit">Login</button>
+
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Modal for Register -->
+        <div id="register-popup" class="modal">
+            <div class="modal-content">
+                <span class="close close-register">&times;</span>
+                <h2>Register</h2>
+                <form id="register-form" action="{% url 'register' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required><br>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" required><br>
+                    <input type="email" name="email" id="reg-email" placeholder="Email" required><br>
+                    <input type="password" name="password" id="reg-password" placeholder="Password" required><br>
+                    <input type="password" name="c_pw" id="confirm-password" placeholder="Confirm Password" required><br>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="foot">
+            <div class="brief">
+                <h1>Al-Jammaini Home</h1>
+                <p>Al-Jammaini Home is a leading company specializing in providing high-quality home appliances to enhance the comfort and convenience of modern living. With a wide range of carefully selected products, we cater to the diverse needs of our customers. Our mission is to offer exceptional customer service, delivering top-notch appliances that transform homes into smarter, more efficient spaces. Whether you’re looking for the latest kitchen gadgets or reliable home essentials, Al-Jammaini Home is your trusted partner in creating a better home experience.</p>
+            </div>
+            <div class="contact">
+                <h1>Reach Us</h1>
+                <p><strong>Tel:</strong> +970-598921999 | +970-595500481</p>
+                <p><strong>Email:</strong> Belal.omar@hotmail.com</p>
+                <p><strong>Whatsapp:</strong> +972 56-8940335</p>
+                <p><strong>Facebook:</strong> <a href="#">Al Jammaini Home</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

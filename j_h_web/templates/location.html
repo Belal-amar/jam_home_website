@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Location</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/locationstyle.css' %}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUh4lb_ss2MU3PCp3LhNf0GoZnDJBKVew
+    &callback=initMap" async defer></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="{% static 'images/J-H.jpg' %}" alt="Logo" class="navbar-logo">
+                <h1>Al-Jammaini Home</h1>
+            </div>
+            <div class="navbar-links">
+                <a href="{% url 'home' %}">Home</a>         
+                
+                <a href="#">About</a>
+                {% if user %}
+                    <a href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                    <a href="">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    
+    <div class="map">
+        <div id="map" class="map"></div>
+    </div>
+   
+
+    <footer>
+        <p>&copy; 2025 Al-Jammaini Home. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            var companyLocation = { lat: 32.1321, lng: 35.2033 }; // Replace with actual coordinates
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: companyLocation
+            });
+            var marker = new google.maps.Marker({
+                position: companyLocation,
+                map: map,
+                title: "Al-Jammaini Home"
+            });
+        }
+    </script>
+
+</body>
+</html>
