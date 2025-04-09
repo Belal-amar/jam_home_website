@@ -10,7 +10,7 @@
     <script src="{% static 'js/product-details.js' %}"></script>
 </head>
 <body>
-    <!-- Navbar -->
+  
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo-container">
@@ -31,9 +31,9 @@
             </div>
         </div>
     </nav>
-    <!-- Category Title -->
+  
     <h2>Products in {{ category.name }}</h2>
-    <!-- Product Cards -->
+   
     <section class="products">
         <div class="product-grid">
             <div class="product-cards">             
@@ -41,7 +41,7 @@
                     <div class="product-card">
                         <img src="{{ product.image }}" alt="Product Image">
                         <h3>{{ product.name }}</h3>
-                        <!-- <p>{{ product.price }}</p> -->
+                        
                         <button class="details-btn" data-product-id="{{ product.id }}">Details</button>
                         <form method="post" action="{% url 'add_to_cart' product.id %}">
                             {% csrf_token %}
@@ -63,7 +63,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Al-Jammaini Home. All Rights Reserved.</p>
     </footer>

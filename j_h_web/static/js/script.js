@@ -1,27 +1,26 @@
 
 
 $(document).ready(function() {
-    // Open Register Popup
+
     $('#register-btn').click(function() {
         $('#register-popup').fadeIn();
     });
 
-    // Open Login Popup
+
     $('#login-btn').click(function() {
         $('#login-popup').fadeIn();
     });
 
-    // Close Register Popup
+  
     $('.close-register').click(function() {
         $('#register-popup').fadeOut();
     });
 
-    // Close Login Popup
     $('.close-login').click(function() {
         $('#login-popup').fadeOut();
     });
 
-    // Close the modal when clicking outside of the modal content
+
     $(window).click(function(event) {
         if ($(event.target).is('.modal')) {
             $('.modal').fadeOut();
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function nextSlide() {
         index++;
         if (index >= totalSlides) {
-            index = 0; // Loop back to first image
+            index = 0; 
         }
         updateSlider();
     }
@@ -54,14 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function prevSlide() {
         index--;
         if (index < 0) {
-            index = totalSlides - 1; // Loop to last image
-        }
+            index = totalSlides - 1; 
         updateSlider();
     }
 
     nextBtn.addEventListener("click", nextSlide);
     prevBtn.addEventListener("click", prevSlide);
 
-    // Auto scroll every 3 seconds
+  
     setInterval(nextSlide, 3000);
 });

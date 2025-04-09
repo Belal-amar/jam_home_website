@@ -1,4 +1,4 @@
-/* General Page Styling */
+
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* LOGO SECTION */
+
 .logo {
     width: 100%;
     background-color: #222;
@@ -41,7 +41,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* SLOGAN SECTION */
+
 .slogan {
     position: relative;
     text-align: center;
@@ -82,7 +82,7 @@ body {
     border-radius: 5px;
 }
 
-/* BUTTONS */
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -111,9 +111,7 @@ body {
     transform: scale(1.05);
 }
 
-/* FOOTER */
 
-/* RESPONSIVENESS */
 @media (max-width: 768px) {
     .slogan-text {
         font-size: 2rem;
@@ -127,7 +125,7 @@ body {
         text-align: center;
     }
 }
-/* LOGO SECTION */
+
 .logo {
     width: 100%;
     background-color: #111;
@@ -172,7 +170,7 @@ body {
     margin: 5px 0 0;
 }
 
-/* RESPONSIVENESS */
+
 @media (max-width: 768px) {
     .logo-container {
         flex-direction: column;
@@ -192,13 +190,12 @@ body {
     }
 }
 
-/* FOOTER SECTION */
-/* FOOTER SECTION */
+
 .foot {
     background-color: #333;
     width: 100%;
    max-width: 1300px;
-    margin: 0 auto; /* Centers the footer within the page */
+    margin: 0 auto; 
     padding: 40px 20px;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -231,11 +228,11 @@ body {
 }
 
 .foot a:hover {
-    color: #e55a4d; /* Slightly darker shade for hover effect */
+    color: #e55a4d; 
     text-decoration: underline;
 }
 
-/* Brief Section Styling */
+
 .brief {
     flex: 1;
     padding-right: 20px;
@@ -243,23 +240,22 @@ body {
 
 .contact {
     flex: 1;
-    padding-top: 20px;  /* Add space above contact */
+    padding-top: 20px; 
    
     
 }
 
 .contact p strong {
-    color: #c21e1e;  /* Accent color for strong texts */
+    color: #c21e1e;  
 }
 
-/* RESPONSIVENESS */
 @media (max-width: 768px) {
     .foot {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 25px;
-        max-width: 100%; /* Allow full width on small screens */
+        max-width: 100%; 
     }
 
     .brief {
@@ -284,34 +280,34 @@ body {
 
 
 
-/* Modal Styles */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.5); /* Dark background */
-    animation: fadeIn 0.5s ease-in-out; /* Animation for fade-in effect */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+    animation: fadeIn 0.5s ease-in-out; 
 }
 
-/* Modal Content */
+
 .modal-content {
     background-color: #fff;
     margin: 10% auto;
     padding: 30px;
     border-radius: 8px;
-    width: 40%; /* Width of the modal */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
-    animation: slideIn 0.5s ease-out; /* Slide-in effect for modal */
-    max-height: 80vh; /* Limit height */
-    overflow-y: auto; /* Add scrolling if content is too long */
+    width: 40%; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+    max-height: 80vh; 
+    overflow-y: auto; 
 }
 
-/* Close Button */
+
 .close {
     color: #999;
     font-size: 28px;
@@ -329,7 +325,7 @@ body {
     cursor: pointer;
 }
 
-/* Modal Animation (Slide-In) */
+
 @keyframes slideIn {
     from {
         transform: translateY(-100%);
@@ -339,7 +335,7 @@ body {
     }
 }
 
-/* Modal Background Fade-In */
+
 @keyframes fadeIn {
     from {
         background-color: rgba(0,0,0,0);
@@ -349,7 +345,7 @@ body {
     }
 }
 
-/* Form Fields Styling */
+
 input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 12px;
@@ -361,7 +357,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
-    border-color: #ff6f61; /* Change border color on focus */
+    border-color: #ff6f61; 
     outline: none;
 }
 
@@ -377,13 +373,13 @@ button {
 }
 
 button:hover {
-    background-color: #e55a4d; /* Darker shade on hover */
+    background-color: #e55a4d; 
 }
 
-/* Responsive Design for Modals */
+
 @media screen and (max-width: 768px) {
     .modal-content {
-        width: 80%; /* Make modal larger on smaller screens */
+        width: 80%;
         padding: 20px;
     }
 }

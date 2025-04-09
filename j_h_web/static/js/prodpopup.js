@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    // Ensure modal is hidden on page load
+
     $("#product-details-modal").hide();
 
-    // Open modal when clicking "Details"
+
     $(".details-btn").click(function () {
-        var productId = $(this).data("product-id"); // Get product ID from button
+        var productId = $(this).data("product-id"); 
         openProductModal(productId);
     });
 
-    // Close modal when clicking the close button
+
     $(".close").click(function () {
         $("#product-details-modal").fadeOut();
     });
 
-    // Close modal when clicking outside of it
+
     $(window).click(function (event) {
         if ($(event.target).is("#product-details-modal")) {
             $("#product-details-modal").fadeOut();
@@ -21,7 +21,6 @@ $(document).ready(function () {
     });
 });
 
-// Function to load product details and show the modal
 function openProductModal(productId) {
     $.ajax({
         url: "/product/" + productId,
@@ -37,7 +36,7 @@ function openProductModal(productId) {
                 if (data.image_url) {
                     $("#product-image").attr("src", data.image_url);
                 } else {
-                    $("#product-image").attr("src", "/static/default-image.png"); // Fallback image
+                    $("#product-image").attr("src", "/static/default-image.png"); 
                 }
                 $("#product-details-modal").fadeIn();
             }
